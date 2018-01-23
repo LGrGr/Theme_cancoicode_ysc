@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'ralewayExtraBold';
+    src: url('../fonts/Raleway-ExtraBold.ttf');
+}
+
+nav {
+  background-color: #b11e2f;
+
+}
+
+ul{
+  font-family: 'ralewayExtraBold';
+  font-size: 36px;
+  color: #FFF;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #FFF;
+}
+
+.navbar-brand{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+li{
+  padding-left: 30px;
+}
+
+ul{
+  margin-top: 150px;
+}
