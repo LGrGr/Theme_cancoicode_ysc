@@ -1,0 +1,13 @@
+.article {
+    .container {
+        img {
+                margin: auto;
+            }
+        .titre {
+             h2 {
+                @include fonts(ralewayExtraBold, normal, 72px);
+                color: #b11e2f;
+            }   
+        }
+    }
+}
