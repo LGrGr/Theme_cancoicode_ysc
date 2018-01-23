@@ -3,6 +3,12 @@
     src: url('../fonts/Raleway-ExtraBold.ttf');
 }
 
+@font-face {
+    font-family: 'ralewayMedium';
+    src: url('../fonts/Raleway-Medium.ttf');
+}
+
+/* Header */
 nav {
   background-color: #b11e2f;
 
@@ -29,4 +35,28 @@ li{
 
 ul{
   margin-top: 150px;
+}
+
+
+/* Footer */
+
+footer{
+  background-color: #b11e2f;
+  color: #fff;
+  padding-top: 30px;
+}
+
+i{
+  padding-right: 35px;
+  padding-left: 35px;
+}
+.fa{
+  font-size: 36px;
+}
+.copy {
+
+  font-family: 'ralewayMedium';
+  font-size: 18px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
