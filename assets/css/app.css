@@ -2370,8 +2370,7 @@ footer {
   padding-top: 30px; }
   footer i {
     padding-right: 35px;
-    padding-left: 35px;
-    cursor: pointer; }
+    padding-left: 35px; }
   footer .fa {
     font-size: 36px; }
   footer .copy {
@@ -2735,7 +2734,6 @@ h4 {
 
 .projet hr {
   width: 50px;
-  align-content: flex-start;
   height: 3px;
   background-color: black; }
 
@@ -2760,6 +2758,10 @@ h4 {
   font-family: 'ralewayExtraBold';
   font-size: 36px; }
 
+.blog i {
+  padding-right: 35px;
+  padding-left: 35px; }
+
 .blog h5 {
   font-size: 27px;
   font-family: 'ralewayExtraBold';
@@ -2773,7 +2775,7 @@ h4 {
   padding-right: 5px; }
 
 .blog .l {
-  font-family: 'latoRegular';
+  font-family: 'lato';
   font-size: 18px; }
 
 .blog .stb {
@@ -2791,8 +2793,17 @@ h4 {
 .blog .nbg {
   margin-right: 5px; }
 
+.blog hr {
+  width: 50px;
+  height: 3px;
+  background-color: black; }
+
 .blog .nbd {
   margin-left: 5px; }
+
+.blog .p {
+  font-family: 'latoRegular';
+  font-size: 24px; }
 
 .blog .blk {
   color: #000; }
