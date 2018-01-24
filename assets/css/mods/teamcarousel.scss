@@ -1,0 +1,48 @@
+#carouselTeam {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    .card {
+                padding: 0;
+                border: none;
+                .card-title {
+                    @include fonts(ralewayExtraBold, normal, 24px);
+                    color: #b11e2f;
+                }
+                .pic {
+                    width: 150px;
+                    height: 150px;
+                    margin: auto;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    border-radius: 50%;
+                }
+                .sous-titre {
+                    @include fonts(ralewayMedium, normal, 15px);
+                    color: #b11e2f;
+                }
+                hr {
+                    width: 50px;
+                    height: 3px;
+                    background-color: black;
+                }
+                .card-text {
+                    @include fonts(lato, normal, 15px);
+                    line-height: 18px;
+                    text-align: justify;
+                }
+                a {
+                    @include fonts(ralewayMedium, normal, 15px);
+                    color: #b11e2f; 
+                }
+                .fa {
+                    cursor: pointer;
+                    color: #b11e2f;
+                }
+        }
+    .fa-chevron-left {
+        color: #b11e2f; 
+    }
+    .fa-chevron-right {
+        color: #b11e2f; 
+    }
+}

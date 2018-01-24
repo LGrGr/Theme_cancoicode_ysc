@@ -2378,7 +2378,8 @@ footer {
     font-family: 'ralewayMedium';
     font-size: 18px;
     padding-top: 10px;
-    padding-bottom: 10px; }
+    padding-bottom: 10px;
+    margin: 0; }
 
 .collectif {
   padding-top: 75px; }
@@ -2535,6 +2536,9 @@ footer {
   font-size: 0.9375rem;
   line-height: 26px; }
 
+.commentaire form {
+  padding-top: 60px; }
+
 .commentaire .inputs {
   display: flex;
   flex-direction: column; }
@@ -2543,7 +2547,7 @@ footer {
     font-weight: normal;
     font-size: 15px;
     font-size: 0.9375rem;
-    margin-bottom: 53px;
+    margin-bottom: 51px;
     margin-right: 30px;
     opacity: 1;
     color: #b11e2f;
@@ -2606,3 +2610,117 @@ footer {
   font-size: 24px;
   font-size: 1.5rem;
   cursor: pointer; }
+
+#carouselTeam {
+  padding-top: 60px;
+  padding-bottom: 60px; }
+  #carouselTeam .card {
+    padding: 0;
+    border: none; }
+    #carouselTeam .card .card-title {
+      font-family: ralewayExtraBold;
+      font-weight: normal;
+      font-size: 24px;
+      font-size: 1.5rem;
+      color: #b11e2f; }
+    #carouselTeam .card .pic {
+      width: 150px;
+      height: 150px;
+      margin: auto;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 50%; }
+    #carouselTeam .card .sous-titre {
+      font-family: ralewayMedium;
+      font-weight: normal;
+      font-size: 15px;
+      font-size: 0.9375rem;
+      color: #b11e2f; }
+    #carouselTeam .card hr {
+      width: 50px;
+      height: 3px;
+      background-color: black; }
+    #carouselTeam .card .card-text {
+      font-family: lato;
+      font-weight: normal;
+      font-size: 15px;
+      font-size: 0.9375rem;
+      line-height: 18px;
+      text-align: justify; }
+    #carouselTeam .card a {
+      font-family: ralewayMedium;
+      font-weight: normal;
+      font-size: 15px;
+      font-size: 0.9375rem;
+      color: #b11e2f; }
+    #carouselTeam .card .fa {
+      cursor: pointer;
+      color: #b11e2f; }
+  #carouselTeam .fa-chevron-left {
+    color: #b11e2f; }
+  #carouselTeam .fa-chevron-right {
+    color: #b11e2f; }
+
+.header_accueil,
+.carouselred,
+.section_icones {
+  background-color: #b11e2f;
+  padding: 0px; }
+
+.logo {
+  padding: 0px;
+  margin-bottom: 30px; }
+
+.header_accueil {
+  height: 724px; }
+
+#carouselExampleControls {
+  height: 482px; }
+
+.titre_bienvenue {
+  color: #b11e2f;
+  font-family: "ralewayExtraBold";
+  margin-top: 88px; }
+
+.sous_titre_bienvenue,
+.card-title,
+.sous-titre-card {
+  color: #b11e2f;
+  font-family: "ralewayExtraBold"; }
+
+.bonne_visite {
+  padding-top: 56px;
+  padding-bottom: 80px; }
+
+.titre_article_carousel,
+.sous-titre_art_car,
+.paragraph_carr {
+  font-family: "ralewayExtraBold";
+  color: #FFF; }
+
+.titre_article_carousel {
+  padding-top: 114px; }
+
+.paragraph_carr {
+  font-family: "lato"; }
+
+.caroussel_articles {
+  padding-top: 88px;
+  padding-bottom: 84px; }
+
+#icone {
+  border-radius: 50%; }
+
+.icones {
+  padding-top: 80px;
+  padding-bottom: 80px; }
+
+.text_icone {
+  color: #FFF;
+  font-family: "ralewayExtraBold"; }
+
+h4 {
+  padding-top: 46px; }
+
+.section_carouselEquipe {
+  background-color: #FFF; }
