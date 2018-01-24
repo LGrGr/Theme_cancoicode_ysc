@@ -3,6 +3,14 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="712.667px" height="572px" viewBox="0 0 712.667 572" enable-background="new 0 0 712.667 572" xml:space="preserve">
+	 <animateTransform attributeType="xml"
+									 attributeName="transform"
+									 type="rotate"
+									 from="0 180 180"
+									 to="360 180 50"
+									 dur="8s"
+									 repeatCount="indefinite"/>
+
 <path fill="#FFFFFF" d="M579.513,144.056c-3.376-5.477-6.991-10.877-10.743-16.052c-1.85-2.571-3.681-5.023-5.449-7.295
 	c-0.828-1.059-1.66-2.123-2.502-3.183l-0.576-0.714c-0.492-0.613-0.982-1.226-1.481-1.828c-0.7-0.882-1.394-1.705-2.096-2.525
 	c-0.439-0.546-0.841-1.013-1.254-1.487c-0.218-0.262-0.39-0.462-0.571-0.67c-0.865-1.012-1.72-2.003-2.589-2.979l-0.466-0.532
