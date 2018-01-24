@@ -6,8 +6,8 @@
 	 <animateTransform attributeType="xml"
 									 attributeName="transform"
 									 type="rotate"
-									 from="0 180 180"
-									 to="360 180 50"
+									 from="0 356.33 286"
+									 to="360 356.33 286"
 									 dur="8s"
 									 repeatCount="indefinite"/>
 
