@@ -2,6 +2,12 @@
   $remSize: $size / 16px;
   @return $remSize * 1rem;
 }
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}  
+}
 
 @mixin bp-large {
   @media only screen and (max-width: 60em) {

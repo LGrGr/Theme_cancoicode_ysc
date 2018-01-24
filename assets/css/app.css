@@ -2350,7 +2350,7 @@ header nav {
 
 header ul {
   font-family: 'ralewayExtraBold';
-  font-size: 36px;
+  font-size: 30px;
   margin-top: 150px;
   color: #FFF; }
 
@@ -2448,44 +2448,161 @@ footer {
       cursor: pointer;
       color: #b11e2f; }
 
-.article .container img {
-  margin: auto; }
+.article {
+  padding-top: 85px;
+  padding-bottom: 100px; }
+  .article .container img {
+    margin: auto; }
+  .article .container .titre h2 {
+    font-family: ralewayExtraBold;
+    font-weight: normal;
+    font-size: 68px;
+    font-size: 4.25rem;
+    color: #b11e2f; }
+  .article .container .titre .sous-titre {
+    font-family: ralewayMedium;
+    font-weight: normal;
+    font-size: 34px;
+    font-size: 2.125rem; }
+  .article .container hr {
+    width: 50px;
+    height: 3px;
+    background-color: black; }
+  .article .container .infos .fa {
+    font-size: 26px;
+    color: #b11e2f; }
+  .article .container .infos div {
+    padding-right: 60px; }
+  .article .container .infos p {
+    font-family: Myriad Pro;
+    font-weight: normal;
+    font-size: 20px;
+    font-size: 1.25rem;
+    color: #6b6b6b; }
+  .article .container .text {
+    font-family: lato;
+    font-weight: normal;
+    font-size: 15px;
+    font-size: 0.9375rem;
+    text-align: justify;
+    padding-top: 25px;
+    line-height: 26px;
+    padding-bottom: 100px; }
+  .article .container button {
+    color: white;
+    border: 1px solid black;
+    background-color: #b11e2f;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-family: lato;
+    font-weight: normal;
+    font-size: 24px;
+    font-size: 1.5rem; }
 
-.article .container .titre h2 {
-  font-family: ralewayExtraBold;
-  font-weight: normal;
-  font-size: 68px;
-  font-size: 4.25rem;
-  color: #b11e2f; }
+.commentaire hr {
+  width: 920px;
+  background-color: #999999;
+  margin-bottom: 25px; }
 
-.article .container .titre .sous-titre {
-  font-family: ralewayMedium;
-  font-weight: normal;
-  font-size: 34px;
-  font-size: 2.125rem; }
+.commentaire .pic {
+  width: 100px;
+  height: 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%; }
 
-.article .container hr {
-  width: 50px;
-  height: 3px;
-  background-color: black; }
+.commentaire .author {
+  display: flex;
+  justify-content: flex-start; }
+  .commentaire .author p {
+    font-family: ralewayExtraBold;
+    font-weight: normal;
+    font-size: 28px;
+    font-size: 1.75rem;
+    color: #b11e2f;
+    padding-top: 25px;
+    padding-left: 20px; }
 
-.article .container .infos .fa {
-  font-size: 26px;
-  color: #b11e2f; }
-
-.article .container .infos div {
-  padding-right: 60px; }
-
-.article .container .infos p {
-  font-family: Myriad Pro;
-  font-weight: normal;
-  font-size: 20px;
-  font-size: 1.25rem;
-  color: #6b6b6b; }
-
-.article .container .text {
+.commentaire .message {
+  text-align: justify;
+  padding-top: 35px;
+  padding-bottom: 35px;
   font-family: lato;
   font-weight: normal;
   font-size: 15px;
   font-size: 0.9375rem;
-  text-align: justify; }
+  line-height: 26px; }
+
+.commentaire .inputs {
+  display: flex;
+  flex-direction: column; }
+  .commentaire .inputs input {
+    font-family: ralewayMedium;
+    font-weight: normal;
+    font-size: 15px;
+    font-size: 0.9375rem;
+    margin-bottom: 53px;
+    margin-right: 30px;
+    opacity: 1;
+    color: #b11e2f;
+    border: solid 1px #999999;
+    padding: 10px 250px 10px 20px; }
+
+.commentaire ::-webkit-input-placeholder {
+  font-family: ralewayMedium;
+  font-weight: normal;
+  font-size: 26px;
+  font-size: 1.625rem;
+  opacity: 1;
+  color: #b11e2f; }
+
+.commentaire :-moz-placeholder {
+  font-family: ralewayMedium;
+  font-weight: normal;
+  font-size: 26px;
+  font-size: 1.625rem;
+  opacity: 1;
+  color: #b11e2f; }
+
+.commentaire ::-moz-placeholder {
+  font-family: ralewayMedium;
+  font-weight: normal;
+  font-size: 26px;
+  font-size: 1.625rem;
+  opacity: 1;
+  color: #b11e2f; }
+
+.commentaire :-ms-input-placeholder {
+  font-family: ralewayMedium;
+  font-weight: normal;
+  font-size: 26px;
+  font-size: 1.625rem;
+  opacity: 1;
+  color: #b11e2f; }
+
+.commentaire textarea {
+  padding-left: 20px;
+  font-family: ralewayMedium;
+  font-weight: normal;
+  font-size: 18px;
+  font-size: 1.125rem;
+  opacity: 1;
+  color: #b11e2f; }
+
+.commentaire button {
+  margin-top: 55px;
+  margin-bottom: 90px;
+  color: white;
+  border: 1px solid black;
+  background-color: #b11e2f;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  font-family: lato;
+  font-weight: normal;
+  font-size: 24px;
+  font-size: 1.5rem;
+  cursor: pointer; }
