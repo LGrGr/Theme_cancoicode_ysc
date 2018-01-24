@@ -5,9 +5,34 @@
             }
         .titre {
              h2 {
-                @include fonts(ralewayExtraBold, normal, 72px);
+                @include fonts(ralewayExtraBold, normal, 68px);
                 color: #b11e2f;
-            }   
+            }
+            .sous-titre {
+                @include fonts(ralewayMedium, normal, 34px);
+            }
+        }
+        hr {
+            width: 50px;
+            height: 3px;
+            background-color: black;
+        }
+        .infos {
+            .fa {
+                font-size: 26px;
+                color: #b11e2f;
+            }
+            div {
+                padding-right: 60px;
+            }
+            p {
+                @include fonts(Myriad Pro, normal, 20px);
+                color: #6b6b6b;
+            }
+        }
+        .text {
+            @include fonts(lato, normal, 15px);
+            text-align: justify;
         }
     }
 }

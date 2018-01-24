@@ -2345,6 +2345,41 @@
   font-family: 'ralewayExtraBold';
   src: url("../fonts/ralewayExtraBold.ttf"); }
 
+header nav {
+  background-color: #b11e2f; }
+
+header ul {
+  font-family: 'ralewayExtraBold';
+  font-size: 36px;
+  margin-top: 150px;
+  color: #FFF; }
+
+header .navbar-light .navbar-nav .nav-link {
+  color: #FFF; }
+
+header .navbar-brand {
+  margin-top: 30px;
+  margin-bottom: 30px; }
+
+header li {
+  padding-left: 30px; }
+
+footer {
+  background-color: #b11e2f;
+  color: #fff;
+  padding-top: 30px; }
+  footer i {
+    padding-right: 35px;
+    padding-left: 35px;
+    cursor: pointer; }
+  footer .fa {
+    font-size: 36px; }
+  footer .copy {
+    font-family: 'ralewayMedium';
+    font-size: 18px;
+    padding-top: 10px;
+    padding-bottom: 10px; }
+
 .collectif {
   padding-top: 75px; }
   .collectif .container h2 {
@@ -2371,6 +2406,7 @@
 .team {
   padding-top: 75px; }
   .team .container .row .card {
+    padding: 0;
     border: none; }
     .team .container .row .card .card-title {
       font-family: ralewayExtraBold;
@@ -2400,6 +2436,7 @@
       font-weight: normal;
       font-size: 15px;
       font-size: 0.9375rem;
+      line-height: 18px;
       text-align: justify; }
     .team .container .row .card a {
       font-family: ralewayMedium;
@@ -2417,6 +2454,38 @@
 .article .container .titre h2 {
   font-family: ralewayExtraBold;
   font-weight: normal;
-  font-size: 72px;
-  font-size: 4.5rem;
+  font-size: 68px;
+  font-size: 4.25rem;
   color: #b11e2f; }
+
+.article .container .titre .sous-titre {
+  font-family: ralewayMedium;
+  font-weight: normal;
+  font-size: 34px;
+  font-size: 2.125rem; }
+
+.article .container hr {
+  width: 50px;
+  height: 3px;
+  background-color: black; }
+
+.article .container .infos .fa {
+  font-size: 26px;
+  color: #b11e2f; }
+
+.article .container .infos div {
+  padding-right: 60px; }
+
+.article .container .infos p {
+  font-family: Myriad Pro;
+  font-weight: normal;
+  font-size: 20px;
+  font-size: 1.25rem;
+  color: #6b6b6b; }
+
+.article .container .text {
+  font-family: lato;
+  font-weight: normal;
+  font-size: 15px;
+  font-size: 0.9375rem;
+  text-align: justify; }

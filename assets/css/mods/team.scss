@@ -3,6 +3,7 @@
     .container {
         .row {
             .card {
+                padding: 0;
                 border: none;
                 .card-title {
                     @include fonts(ralewayExtraBold, normal, 24px);
@@ -27,6 +28,7 @@
                 }
                 .card-text {
                     @include fonts(lato, normal, 15px);
+                    line-height: 18px;
                     text-align: justify;
                 }
                 a {
