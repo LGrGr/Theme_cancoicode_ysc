@@ -2515,7 +2515,7 @@ footer {
 .commentaire .author {
   display: flex;
   justify-content: flex-start; }
-  .commentaire .author p {
+  .commentaire .author p a {
     font-family: ralewayExtraBold;
     font-weight: normal;
     font-size: 28px;
@@ -2524,7 +2524,7 @@ footer {
     padding-top: 25px;
     padding-left: 20px; }
 
-.commentaire .message {
+.commentaire .message p {
   text-align: justify;
   padding-top: 35px;
   padding-bottom: 35px;
@@ -2730,6 +2730,8 @@ h4 {
 
 .section_articles .card {
   border: none; }
+.section_articles a {
+  color: #b11e2f; }
 
 .section_carouselEquipe {
   background-color: #FFF; }
@@ -2791,6 +2793,8 @@ h4 {
 .blog .stb {
   font-family: 'ralewayMedium';
   font-size: 18px; }
+.blog a {
+    color: #b11e2f; }
 
 .blog .middle {
   padding-top: 80px;

@@ -27,90 +27,21 @@
         </ul>
       </nav>
         <div class="row">
-          <div class="col-lg-4">
-            <img src="<?php bloginfo('template_directory'); ?>/assets/img/article.png" alt="image article" width="100%">
-            <h5 class="red">Titre d'article</h5>
-            <p class="red stb">Sous-titre d'article</p>
-            <hr align="left" />
-            <p class="l">Altera sententia est, quae definit amicitiam paribus officiis ac voluntatibus. Hoc quidem est nimis exigue et exiliter ad calculos vocare amicitiam, ut par sit ratio acceptorum et datorum. Divitior mihi et affluentior videtur esse vera amicitia nec observare restricte, ne plus reddat quam acceperit; neque enim verendum est, ne quid excidat, aut ne quid in [...]</p>
-            <p class="text-right red stb">Lire la suite<i class="fa fa-chevron-right" aria-hidden="true"></i></p>
-          </div>
-          <div class="col-lg-4 ">
-            <img src="<?php bloginfo('template_directory'); ?>/assets/img/article.png" alt="image article" width="100%">
-            <h5 class="red">Titre d'article</h5>
-            <p class="red stb">Sous-titre d'article</p>
-            <hr align="left" />
+       <?php 
+$args = array( 'post_type' => '', 'posts_per_page' => 12 );
+$loop = new WP_Query( $args );
+while ( $loop->have_posts() ) : $loop->the_post();
 
-            <p class="l">Altera sententia est, quae definit amicitiam paribus officiis ac voluntatibus. Hoc quidem est nimis exigue et exiliter ad calculos vocare amicitiam, ut par sit ratio acceptorum et datorum. Divitior mihi et affluentior videtur esse vera amicitia nec observare restricte, ne plus reddat quam acceperit; neque enim verendum est, ne quid excidat, aut ne quid in [...]</p>
-            <p class="text-right red stb">Lire la suite<i class="fa fa-chevron-right" aria-hidden="true"></i></p>
-          </div>
-          <div class="col-lg-4">
-            <img src="<?php bloginfo('template_directory'); ?>/assets/img/article.png" alt="image article" width="100%">
-            <h5 class="red">Titre d'article</h5>
-            <p class="red stb">Sous-titre d'article</p>
-             <hr align="left" />
-            <p class="l">Altera sententia est, quae definit amicitiam paribus officiis ac voluntatibus. Hoc quidem est nimis exigue et exiliter ad calculos vocare amicitiam, ut par sit ratio acceptorum et datorum. Divitior mihi et affluentior videtur esse vera amicitia nec observare restricte, ne plus reddat quam acceperit; neque enim verendum est, ne quid excidat, aut ne quid in [...]</p>
-            <p class="text-right red stb">Lire la suite<i class="fa fa-chevron-right" aria-hidden="true"></i></p>
-          </div>
+echo "<div class='col-lg-4'>".the_post_thumbnail('thumbnail')."
+<h5 class='red'>".get_the_title()."</h5>";
+if(get_field('sous_titre_article')):
+            echo "<p class='red stb'>".get_field('sous_titre_article')."</p>";
+endif;
+echo "<hr align='left' /> <p class='l'>".get_the_excerpt()."</p>       <p class='text-right red stb'><a href='".get_the_permalink()."'>Lire la suite<i class='fa fa-chevron-right' aria-hidden='true'></i></a></p>
+          </div>";
 
-        </div>
-
-
-        <div class="row middle hidden-sm-down">
-          <div class="col-lg-4 ">
-            <img src="<?php bloginfo('template_directory'); ?>/assets/img/article.png" alt="image article" width="100%">
-            <h5 class="red">Titre d'article</h5>
-            <p class="red stb">Sous-titre d'article</p>
-             <hr align="left" />
-            <p class="l">Altera sententia est, quae definit amicitiam paribus officiis ac voluntatibus. Hoc quidem est nimis exigue et exiliter ad calculos vocare amicitiam, ut par sit ratio acceptorum et datorum. Divitior mihi et affluentior videtur esse vera amicitia nec observare restricte, ne plus reddat quam acceperit; neque enim verendum est, ne quid excidat, aut ne quid in [...]</p>
-            <p class="text-right red stb">Lire la suite<i class="fa fa-chevron-right" aria-hidden="true"></i></p>
-          </div>
-          <div class="col-lg-4 ">
-            <img src="<?php bloginfo('template_directory'); ?>/assets/img/article.png" alt="image article" width="100%">
-            <h5 class="red">Titre d'article</h5>
-            <p class="red stb">Sous-titre d'article</p>
-            <hr align="left" />
-            <p class="l">Altera sententia est, quae definit amicitiam paribus officiis ac voluntatibus. Hoc quidem est nimis exigue et exiliter ad calculos vocare amicitiam, ut par sit ratio acceptorum et datorum. Divitior mihi et affluentior videtur esse vera amicitia nec observare restricte, ne plus reddat quam acceperit; neque enim verendum est, ne quid excidat, aut ne quid in [...]</p>
-            <p class="text-right red stb">Lire la suite<i class="fa fa-chevron-right" aria-hidden="true"></i></p>
-          </div>
-          <div class="col-lg-4">
-            <img src="<?php bloginfo('template_directory'); ?>/assets/img/article.png" alt="image article" width="100%">
-            <h5 class="red">Titre d'article</h5>
-            <p class="red stb">Sous-titre d'article</p>
-           <hr align="left" />
-            <p class="l">Altera sententia est, quae definit amicitiam paribus officiis ac voluntatibus. Hoc quidem est nimis exigue et exiliter ad calculos vocare amicitiam, ut par sit ratio acceptorum et datorum. Divitior mihi et affluentior videtur esse vera amicitia nec observare restricte, ne plus reddat quam acceperit; neque enim verendum est, ne quid excidat, aut ne quid in [...]</p>
-            <p class="text-right red stb">Lire la suite<i class="fa fa-chevron-right" aria-hidden="true"></i></p>
-          </div>
-
-        </div>
-
-
-        <div class="row hidden-sm-down">
-          <div class="col-lg-4 ">
-            <img src="<?php bloginfo('template_directory'); ?>/assets/img/article.png" alt="image article" width="100%">
-            <h5 class="red">Titre d'article</h5>
-            <p class="red stb">Sous-titre d'article</p>
-             <hr align="left" />
-            <p class="l">Altera sententia est, quae definit amicitiam paribus officiis ac voluntatibus. Hoc quidem est nimis exigue et exiliter ad calculos vocare amicitiam, ut par sit ratio acceptorum et datorum. Divitior mihi et affluentior videtur esse vera amicitia nec observare restricte, ne plus reddat quam acceperit; neque enim verendum est, ne quid excidat, aut ne quid in [...]</p>
-            <p class="text-right red stb">Lire la suite<i class="fa fa-chevron-right" aria-hidden="true"></i></p>
-          </div>
-          <div class="col-lg-4 ">
-            <img src="<?php bloginfo('template_directory'); ?>/assets/img/article.png" alt="image article" width="100%">
-            <h5 class="red">Titre d'article</h5>
-            <p class="red stb">Sous-titre d'article</p>
-           <hr align="left" />
-            <p class="l">Altera sententia est, quae definit amicitiam paribus officiis ac voluntatibus. Hoc quidem est nimis exigue et exiliter ad calculos vocare amicitiam, ut par sit ratio acceptorum et datorum. Divitior mihi et affluentior videtur esse vera amicitia nec observare restricte, ne plus reddat quam acceperit; neque enim verendum est, ne quid excidat, aut ne quid in [...]</p>
-            <p class="text-right red stb">Lire la suite<i class="fa fa-chevron-right" aria-hidden="true"></i></p>
-          </div>
-          <div class="col-lg-4">
-            <img src="<?php bloginfo('template_directory'); ?>/assets/img/article.png" alt="image article" width="100%">
-            <h5 class="red">Titre d'article</h5>
-            <p class="red stb">Sous-titre d'article</p>
-             <hr align="left" />
-            <p class="l">Altera sententia est, quae definit amicitiam paribus officiis ac voluntatibus. Hoc quidem est nimis exigue et exiliter ad calculos vocare amicitiam, ut par sit ratio acceptorum et datorum. Divitior mihi et affluentior videtur esse vera amicitia nec observare restricte, ne plus reddat quam acceperit; neque enim verendum est, ne quid excidat, aut ne quid in [...]</p>
-            <p class="text-right red stb">Lire la suite<i class="fa fa-chevron-right" aria-hidden="true"></i></p>
-          </div>
-
+endwhile;
+            wp_reset_postdata();?>
         </div>
 
   <nav aria-label="Page navigation example" class="cq">

@@ -24,58 +24,7 @@
     <section class="team">
        <div class="container">
        <div class="row justify-content-center">
-            <div class="card col-lg-3">
-                <div style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/img/image_card.png)" class="pic">
-                </div>
-              <div class="card-body">
-                <h5 class="card-title text-center text-uppercase">Charlie Moreau</h5>
-                <p class="sous-titre text-center">Developpeur métalleux</p>
-                <hr />
-                <p class="card-text">Altera sententia est, quae definit amicitiam paribus officiis ac voluntatibus. Hoc quidem est nimis exigue et exiliter ad calculos vocare amicitiam, ut par sit ratio acceptorum et datorum. Divitior mihi et affluentior videtur esse vera amicitia nec observare restricte, ne plus reddat quam acceperit; neque enim verendum est, ne quid excidat, aut ne quid in [...]</p>
-                <a href="#" class="pull-right">Lire la suite ></a>
-                <i class="pull-left fa fa-github fa-2x" aria-hidden="true"></i>
-                <i class="pull-left fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
-              </div>
-            </div>
-            <div class="card col-lg-3">
-                <div style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/img/image_card.png)" class="pic">
-                </div>
-              <div class="card-body">
-                <h5 class="card-title text-center text-uppercase">Charlie Moreau</h5>
-                <p class="sous-titre text-center">Developpeur métalleux</p>
-                <hr />
-                <p class="card-text">Altera sententia est, quae definit amicitiam paribus officiis ac voluntatibus. Hoc quidem est nimis exigue et exiliter ad calculos vocare amicitiam, ut par sit ratio acceptorum et datorum. Divitior mihi et affluentior videtur esse vera amicitia nec observare restricte, ne plus reddat quam acceperit; neque enim verendum est, ne quid excidat, aut ne quid in [...]</p>
-                <a href="#" class="pull-right">Lire la suite ></a>
-                <i class="pull-left fa fa-github fa-2x" aria-hidden="true"></i>
-                <i class="pull-left fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
-              </div>
-            </div>
-            <div class="card col-lg-3">
-                <div style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/img/image_card.png)" class="pic">
-                </div>
-              <div class="card-body">
-                <h5 class="card-title text-center text-uppercase">Charlie Moreau</h5>
-                <p class="sous-titre text-center">Developpeur métalleux</p>
-                <hr />
-                <p class="card-text">Altera sententia est, quae definit amicitiam paribus officiis ac voluntatibus. Hoc quidem est nimis exigue et exiliter ad calculos vocare amicitiam, ut par sit ratio acceptorum et datorum. Divitior mihi et affluentior videtur esse vera amicitia nec observare restricte, ne plus reddat quam acceperit; neque enim verendum est, ne quid excidat, aut ne quid in [...]</p>
-                <a href="#" class="pull-right">Lire la suite ></a>
-                <i class="pull-left fa fa-github fa-2x" aria-hidden="true"></i>
-                <i class="pull-left fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
-              </div>
-            </div>
-            <div class="card col-lg-3">
-                <div style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/img/image_card.png)" class="pic">
-                </div>
-              <div class="card-body">
-                <h5 class="card-title text-center text-uppercase">Charlie Moreau</h5>
-                <p class="sous-titre text-center">Developpeur métalleux</p>
-                <hr />
-                <p class="card-text">Altera sententia est, quae definit amicitiam paribus officiis ac voluntatibus. Hoc quidem est nimis exigue et exiliter ad calculos vocare amicitiam, ut par sit ratio acceptorum et datorum. Divitior mihi et affluentior videtur esse vera amicitia nec observare restricte, ne plus reddat quam acceperit; neque enim verendum est, ne quid excidat, aut ne quid in [...]</p>
-                <a href="#" class="pull-right">Lire la suite ></a>
-                <i class="pull-left fa fa-github fa-2x" aria-hidden="true"></i>
-                <i class="pull-left fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
-              </div>
-            </div>
+            <?php echo do_shortcode('[postCancoillote]'); ?>
            </div>
         </div>
     </section>

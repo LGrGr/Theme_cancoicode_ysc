@@ -1,76 +1,33 @@
 <?php get_header(); ?>
-
- <!-- HEADER -->
-   <header>
-        <nav class="navbar navbar-expand-lg navbar-toggleable-md navbar-light">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand" href="#"> <img src="assets/img/logo_cancoicode_penche.svg" width="320px" height="220px" alt="logo_cancoicode"></a>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#">ACCUEIL <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">BLOG</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                &Eacute;QUIPE
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">PROJETS</a>
-            </li>
-          </ul>
-      </div>
-    </nav>
-</header>
-   
+   <?php if(have_posts()): ?>
+   <?php while(have_posts()) : the_post(); ?>
     <!-- section 'article' -->
     <section class="article">
        <div class="container">
             <div class="offset-lg-1 col-lg-6">
-                <img class="" src="assets/img/article.jpg" alt="">
+                <?php if(has_post_thumbnail()): the_post_thumbnail(); endif; ?>
             </div>
                 <div class="titre text-center">
-                    <h2>TITRE</h2>
+                    <h2><?php the_title(); ?></h2>
                     <hr />
-                    <p class="sous-titre">SOUS-TITRE</p>
+                    <p class="sous-titre">the_field('sous_titre_article')</p>
                </div>
                <div class="row justify-content-center infos">
                   <div class="date">
                        <i class="pull-left fa fa-calendar-check-o fa-2x" aria-hidden="true"></i>
-                       <p class="pull-right">24 decembre 2017</p>
+                       <p class="pull-right"><?php the_date(); ?></p>
                    </div>
                    <div class="author">
                        <i class="pull-left fa fa-user-circle-o fa-2x" aria-hidden="true"></i>
-                       <p class="pull-right">Sandrine MATHIEU</p>
+                       <p class="pull-right"><?php the_author(); ?></p>
                    </div>
                    <div class="comments">
                        <i class="pull-left fa fa-comments fa-2x" aria-hidden="true"></i>
-                       <p class="pull-right">1 commentaire</p>
+                       <p class="pull-right"><?php $count = wp_count_comments(get_the_ID()); echo $count->total_comments; ?> commentaire</p>
                    </div>
                </div>
                <div class="text">
-                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id urna lacus. Praesent vel porta lacus. Vivamus porta tortor et tellus posuere, a porttitor velit vehicula. Aliquam congue eros vel sapien fermentum, vitae auctor lectus accumsan. Pellentesque et est tincidunt, dapibus augue vel, dictum metus. In lacinia finibus sem, ac bibendum eros tristique vel. Proin velit purus, facilisis at congue porttitor, fringilla id tortor. Nulla sit amet nisl et purus porta egestas pulvinar non velit. Nam viverra aliquet nibh id porttitor. Sed consequat at lectus tincidunt posuere. Nam pharetra sapien in lectus dictum vulputate. <br> <br>
-
-                    Nam non faucibus lectus, in laoreet tortor. Nulla dictum dolor est, a pellentesque neque blandit quis. Praesent eu placerat leo, a dictum sem. Duis leo diam, molestie vel lacus id, ultricies efficitur lorem. Aliquam erat volutpat. Nunc congue vulputate ex et finibus. Nam sagittis justo sit amet ante commodo, sit amet malesuada lorem vehicula. <br> <br>
-
-                    Nam est lorem, bibendum sed ligula vitae, dictum porttitor mi. Pellentesque accumsan finibus convallis. In commodo non lorem at congue. Proin maximus rutrum sapien, sed euismod lacus gravida in. Quisque quis ligula facilisis, euismod purus eu, euismod arcu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Curabitur vehicula egestas congue. Etiam bibendum volutpat justo, at vestibulum nibh egestas et. Duis vel justo tempus, luctus neque in, aliquet elit. Donec finibus leo nec facilisis finibus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque accumsan, dui et tincidunt tempor, tortor ligula feugiat massa, ornare eleifend magna nunc ullamcorper est. Curabitur venenatis, ex sed ultrices vestibulum, enim odio hendrerit mauris, vel faucibus odio urna et leo. Praesent ac tempus magna. <br> <br>
-
-                    Aenean condimentum elit vitae vehicula vestibulum. Cras mollis est at finibus egestas. Nam nec porta nunc. Vivamus nec tellus sed nibh imperdiet euismod at id justo. Nullam eros lacus, vulputate tincidunt malesuada vitae, venenatis sed felis. Nullam semper libero feugiat felis cursus fermentum. Etiam eu pretium sem. Vestibulum molestie congue libero, id dignissim lacus volutpat in. Vivamus tincidunt ullamcorper sapien, ac tincidunt ipsum pretium sed. Integer dapibus erat est, aliquam lobortis quam efficitur ac. Aliquam eget pretium ex. Integer et felis eget mi eleifend vestibulum. Fusce id faucibus nisl, a tincidunt nibh. Praesent vitae rutrum nunc. Phasellus imperdiet imperdiet sapien. <br> <br>
-
-                    Curabitur id mattis odio. Sed rutrum enim in diam blandit condimentum. Nulla a arcu et libero fermentum sollicitudin. Phasellus eget mi maximus, efficitur orci vel, scelerisque justo. In in mauris nunc. Curabitur vulputate aliquam urna, sed ultricies lectus pulvinar a. Maecenas vehicula odio maximus libero condimentum, in semper lectus feugiat. Nulla ut pulvinar eros. Suspendisse ante urna, blandit sit amet pharetra id, tristique ut felis. Aenean tristique mauris a mi commodo faucibus. Nunc convallis volutpat odio, ac imperdiet augue tincidunt ut. Duis purus orci, suscipit in tempor et, placerat ut dolor. <br> <br>
-
-                    Nullam sit amet consequat orci. Suspendisse potenti. Nullam semper enim eu diam iaculis scelerisque. Pellentesque convallis neque sit amet purus pretium tristique. Maecenas lacinia a est a convallis. Nullam lacinia tincidunt consequat. Aenean sed velit non sem auctor pretium in sit amet quam. Integer volutpat augue tellus, ut lacinia magna aliquet eu. Nam diam arcu, porttitor ut facilisis vitae, iaculis ac velit. Maecenas ultricies rutrum ornare. Curabitur egestas nisi non urna iaculis luctus. Nunc non nunc in neque porttitor semper. Sed feugiat et arcu sed laoreet. Nulla consequat maximus est at vehicula.
+                   <?php the_content; ?>
                </div>
                <button class="pull-right" type="button">Retour</button>
         </div>
@@ -79,17 +36,11 @@
     <!-- SECTION 'commentaire' -->
     <section class="commentaire">
        <div class="container">
-            <hr />
-            <div class="author">
-                <div style="background-image: url(assets/img/image_card.png)" class="pic">
-                </div>
-                <p class="text-uppercase">Manu</p>
-            </div>
-            <div class="message">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id urna lacus. Praesent vel porta lacus. Vivamus porta tortor et tellus posuere, a porttitor velit vehicula. Aliquam congue eros vel sapien fermentum, vitae auctor lectus accumsan. Pellentesque et est tincidunt, dapibus augue vel, dictum metus. In lacinia finibus sem, ac bibendum eros tristique vel. Proin velit purus, facilisis at congue porttitor, fringilla id tortor. Nulla sit amet nisl et purus porta egestas pulvinar non velit. Nam viverra aliquet nibh id porttitor. Sed consequat at lectus tincidunt posuere. Nam pharetra sapien in lectus dictum vulputate. <br> <br>
-
-                Nam non faucibus lectus, in laoreet tortor. Nulla dictum dolor est, a pellentesque neque blandit quis. Praesent eu placerat leo, a dictum sem. Duis leo diam, molestie vel lacus id, ultricies efficitur lorem. Aliquam erat volutpat. Nunc congue vulputate ex et finibus. Nam sagittis justo sit amet ante commodo, sit amet malesuada lorem vehicula.
-            </div>
+            <?php $comments = get_comments(array(
+			'post_id' => get_the_ID(),
+			'status' => 'approve'
+		)); 
+           format_comment($comments); ?>
             <hr />
             <div class="row">
                 <form action="">
@@ -104,5 +55,5 @@
            </div>
         </div>
     </section>
-
+<?php endwhile; endif; ?>
 <?php get_footer(); ?>

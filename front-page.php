@@ -164,41 +164,24 @@
        <div class="container">
            <div class="row caroussel_articles">
           
-              <div class="card col-4" style="width: 20rem;">
-                  <img class="card-img-top" src="..." alt="Card image cap">
-                      <div class="card-block">
-                        <h4 class="card-title">Titre d'article</h4>
-                        <p class="sous-titre-card">Sous-titre d'article</p>
-                            <hr align="left" />
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, commodi. Nisi quisquam, ut error laborum fuga cum esse cumque obcaecati, modi molestiae!</p>
-                        
-                      </div>
-              </div>
-           
-            <div class="card col-4" style="width: 20rem;">
-                    <img class="card-img-top" src="..." alt="Card image cap">
-                <div class="card-block">
-                        <h4 class="card-title">Titre d'article</h4>
-                        <p class="sous-titre-card">Sous-titre d'article</p>
-                            <hr align="left" />
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, commodi. Nisi quisquam, ut error laborum fuga cum esse cumque obcaecati, modi molestiae!</p>
-                        
-                </div>
-            </div>
-          
-            <div class="card col-4" style="width: 20rem;">
-                <img class="card-img-top" src="..." alt="Card image cap">
-                    <div class="card-block">
-                        <h4 class="card-title">Titre d'article</h4>
-                        <p class="sous-titre-card">Sous-titre d'article</p>
-                            <hr align="left" />
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, commodi. Nisi quisquam, ut error laborum fuga cum esse cumque obcaecati, modi molestiae!</p>
-                            
-                    </div>
+              <?php 
+$args = array( 'post_type' => '', 'posts_per_page' => 3 );
+$loop = new WP_Query( $args );
+while ( $loop->have_posts() ) : $loop->the_post();
+
+echo "<div class='col-lg-4'>".the_post_thumbnail('thumbnail')."
+<h5 class='red'>".get_the_title()."</h5>";
+if(get_field('sous_titre_article')):
+            echo "<p class='red stb'>".get_field('sous_titre_article')."</p>";
+endif;
+echo "<hr align='left' /> <p class='l'>".get_the_excerpt()."</p>       <p class='text-right red stb'><a href='".get_the_permalink()."'>Lire la suite<i class='fa fa-chevron-right' aria-hidden='true'></i></a></p>
+          </div>";
+
+endwhile;
+            wp_reset_postdata();?>
             </div>  
            </div>
        </div>
-    </div>
 </section>
    
    
@@ -211,27 +194,27 @@
                   
                  <div class="col-3">
                      <img src="<?php bloginfo('template_directory'); ?>/assets/img/cafe.jpg" alt="icone d'un café" id="icone"> 
-                         <h4 class="text_icone">2641</h4>
+                         <h4 class="text_icone count">2641</h4>
                          <h5 class="text_icone" >CAF&Eacute;S ENGLOUTIS</h5>
                      </div>
               
                  
                   <div class="col-3">
                      <img src="<?php bloginfo('template_directory'); ?>/assets/img/git.jpg" alt="icone de Github" id="icone">
-                         <h4 class="text_icone">991</h4>
+                         <h4 class="text_icone count">991</h4>
                          <h5 class="text_icone">TENTATIVE DE PUSH</h5>
                     
                  </div>
                   
                    <div class="col-3">
                      <img src="<?php bloginfo('template_directory'); ?>/assets/img/lit.jpg" alt="icone d'un lit" id="icone"> 
-                     <h4 class="text_icone">195</h4>
+                     <h4 class="text_icone count">195</h4>
                      <h5 class="text_icone">NUITS BLANCHES</h5>
                  </div>
                   
                   <div class="col-3">
                      <img src="<?php bloginfo('template_directory'); ?>/assets/img/couverts.jpg" alt="icone de couverts" id="icone"> 
-                     <h4 class="text_icone">3471</h4>
+                     <h4 class="text_icone count">3471</h4>
                      <h5 class="text_icone">PANINIS LE MIDI</h5>
                  </div> 
                     </div>  
@@ -249,135 +232,21 @@
             <div class="carousel-item active">
              <div class="container">
               <div class="row">
-               <div class="card col-lg-4">
-                        <div style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/img/image_card.png)" class="pic">
-                        </div>
-                      <div class="card-body">
-                        <h5 class="card-title text-center text-uppercase">Charlie Moreau</h5>
-                        <p class="sous-titre text-center">Developpeur métalleux</p>
-                        <hr />
-                        <p class="card-text">Altera sententia est, quae definit amicitiam paribus officiis ac voluntatibus. Hoc quidem est nimis exigue et exiliter ad calculos vocare amicitiam, ut par sit ratio acceptorum et datorum. Divitior mihi et affluentior videtur esse vera amicitia nec observare restricte, ne plus reddat quam acceperit; neque enim verendum est, ne quid excidat, aut ne quid in [...]</p>
-                        <a href="#" class="pull-right">Lire la suite ></a>
-                        <i class="pull-left fa fa-github fa-2x" aria-hidden="true"></i>
-                        <i class="pull-left fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
-                      </div>
-                    </div>
-                    <div class="card col-lg-4">
-                        <div style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/img/image_card.png)" class="pic">
-                        </div>
-                      <div class="card-body">
-                        <h5 class="card-title text-center text-uppercase">Charlie Moreau</h5>
-                        <p class="sous-titre text-center">Developpeur métalleux</p>
-                        <hr />
-                        <p class="card-text">Altera sententia est, quae definit amicitiam paribus officiis ac voluntatibus. Hoc quidem est nimis exigue et exiliter ad calculos vocare amicitiam, ut par sit ratio acceptorum et datorum. Divitior mihi et affluentior videtur esse vera amicitia nec observare restricte, ne plus reddat quam acceperit; neque enim verendum est, ne quid excidat, aut ne quid in [...]</p>
-                        <a href="#" class="pull-right">Lire la suite ></a>
-                        <i class="pull-left fa fa-github fa-2x" aria-hidden="true"></i>
-                        <i class="pull-left fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
-                      </div>
-                    </div>
-                    <div class="card col-lg-4">
-                        <div style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/img/image_card.png)" class="pic">
-                        </div>
-                      <div class="card-body">
-                        <h5 class="card-title text-center text-uppercase">Charlie Moreau</h5>
-                        <p class="sous-titre text-center">Developpeur métalleux</p>
-                        <hr />
-                        <p class="card-text">Altera sententia est, quae definit amicitiam paribus officiis ac voluntatibus. Hoc quidem est nimis exigue et exiliter ad calculos vocare amicitiam, ut par sit ratio acceptorum et datorum. Divitior mihi et affluentior videtur esse vera amicitia nec observare restricte, ne plus reddat quam acceperit; neque enim verendum est, ne quid excidat, aut ne quid in [...]</p>
-                        <a href="#" class="pull-right">Lire la suite ></a>
-                        <i class="pull-left fa fa-github fa-2x" aria-hidden="true"></i>
-                        <i class="pull-left fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
-                      </div>
-                    </div>
+               <?php echo do_shortcode('[postCancoillote]'); ?>
                 </div>
                 </div>
             </div>
             <div class="carousel-item">
               <div class="container">
               <div class="row">
-               <div class="card col-lg-4">
-                        <div style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/img/image_card.png)" class="pic">
-                        </div>
-                      <div class="card-body">
-                        <h5 class="card-title text-center text-uppercase">Charlie Moreau</h5>
-                        <p class="sous-titre text-center">Developpeur métalleux</p>
-                        <hr />
-                        <p class="card-text">Altera sententia est, quae definit amicitiam paribus officiis ac voluntatibus. Hoc quidem est nimis exigue et exiliter ad calculos vocare amicitiam, ut par sit ratio acceptorum et datorum. Divitior mihi et affluentior videtur esse vera amicitia nec observare restricte, ne plus reddat quam acceperit; neque enim verendum est, ne quid excidat, aut ne quid in [...]</p>
-                        <a href="#" class="pull-right">Lire la suite ></a>
-                        <i class="pull-left fa fa-github fa-2x" aria-hidden="true"></i>
-                        <i class="pull-left fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
-                      </div>
-                    </div>
-                    <div class="card col-lg-4">
-                        <div style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/img/image_card.png)" class="pic">
-                        </div>
-                      <div class="card-body">
-                        <h5 class="card-title text-center text-uppercase">Charlie Moreau</h5>
-                        <p class="sous-titre text-center">Developpeur métalleux</p>
-                        <hr />
-                        <p class="card-text">Altera sententia est, quae definit amicitiam paribus officiis ac voluntatibus. Hoc quidem est nimis exigue et exiliter ad calculos vocare amicitiam, ut par sit ratio acceptorum et datorum. Divitior mihi et affluentior videtur esse vera amicitia nec observare restricte, ne plus reddat quam acceperit; neque enim verendum est, ne quid excidat, aut ne quid in [...]</p>
-                        <a href="#" class="pull-right">Lire la suite ></a>
-                        <i class="pull-left fa fa-github fa-2x" aria-hidden="true"></i>
-                        <i class="pull-left fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
-                      </div>
-                    </div>
-                    <div class="card col-lg-4">
-                        <div style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/img/image_card.png)" class="pic">
-                        </div>
-                      <div class="card-body">
-                        <h5 class="card-title text-center text-uppercase">Charlie Moreau</h5>
-                        <p class="sous-titre text-center">Developpeur métalleux</p>
-                        <hr />
-                        <p class="card-text">Altera sententia est, quae definit amicitiam paribus officiis ac voluntatibus. Hoc quidem est nimis exigue et exiliter ad calculos vocare amicitiam, ut par sit ratio acceptorum et datorum. Divitior mihi et affluentior videtur esse vera amicitia nec observare restricte, ne plus reddat quam acceperit; neque enim verendum est, ne quid excidat, aut ne quid in [...]</p>
-                        <a href="#" class="pull-right">Lire la suite ></a>
-                        <i class="pull-left fa fa-github fa-2x" aria-hidden="true"></i>
-                        <i class="pull-left fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
-                      </div>
-                    </div>
+               <?php echo do_shortcode('[postCancoillote]'); ?>
                 </div>
                 </div>
             </div>
             <div class="carousel-item">
              <div class="container">
               <div class="row">
-               <div class="card col-lg-4">
-                        <div style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/img/image_card.png)" class="pic">
-                        </div>
-                      <div class="card-body">
-                        <h5 class="card-title text-center text-uppercase">Charlie Moreau</h5>
-                        <p class="sous-titre text-center">Developpeur métalleux</p>
-                        <hr />
-                        <p class="card-text">Altera sententia est, quae definit amicitiam paribus officiis ac voluntatibus. Hoc quidem est nimis exigue et exiliter ad calculos vocare amicitiam, ut par sit ratio acceptorum et datorum. Divitior mihi et affluentior videtur esse vera amicitia nec observare restricte, ne plus reddat quam acceperit; neque enim verendum est, ne quid excidat, aut ne quid in [...]</p>
-                        <a href="#" class="pull-right">Lire la suite ></a>
-                        <i class="pull-left fa fa-github fa-2x" aria-hidden="true"></i>
-                        <i class="pull-left fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
-                      </div>
-                    </div>
-                    <div class="card col-lg-4">
-                        <div style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/img/image_card.png)" class="pic">
-                        </div>
-                      <div class="card-body">
-                        <h5 class="card-title text-center text-uppercase">Charlie Moreau</h5>
-                        <p class="sous-titre text-center">Developpeur métalleux</p>
-                        <hr />
-                        <p class="card-text">Altera sententia est, quae definit amicitiam paribus officiis ac voluntatibus. Hoc quidem est nimis exigue et exiliter ad calculos vocare amicitiam, ut par sit ratio acceptorum et datorum. Divitior mihi et affluentior videtur esse vera amicitia nec observare restricte, ne plus reddat quam acceperit; neque enim verendum est, ne quid excidat, aut ne quid in [...]</p>
-                        <a href="#" class="pull-right">Lire la suite ></a>
-                        <i class="pull-left fa fa-github fa-2x" aria-hidden="true"></i>
-                        <i class="pull-left fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
-                      </div>
-                    </div>
-                    <div class="card col-lg-4">
-                        <div style="background-image: url(<?php bloginfo('template_directory'); ?>/assets/img/image_card.png)" class="pic">
-                        </div>
-                      <div class="card-body">
-                        <h5 class="card-title text-center text-uppercase">Charlie Moreau</h5>
-                        <p class="sous-titre text-center">Developpeur métalleux</p>
-                        <hr />
-                        <p class="card-text">Altera sententia est, quae definit amicitiam paribus officiis ac voluntatibus. Hoc quidem est nimis exigue et exiliter ad calculos vocare amicitiam, ut par sit ratio acceptorum et datorum. Divitior mihi et affluentior videtur esse vera amicitia nec observare restricte, ne plus reddat quam acceperit; neque enim verendum est, ne quid excidat, aut ne quid in [...]</p>
-                        <a href="#" class="pull-right">Lire la suite ></a>
-                        <i class="pull-left fa fa-github fa-2x" aria-hidden="true"></i>
-                        <i class="pull-left fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
-                      </div>
-                    </div>
+               <?php echo do_shortcode('[postCancoillote]'); ?>
                 </div>
                 </div>
                 </div>
