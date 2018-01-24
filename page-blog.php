@@ -1,0 +1,138 @@
+    <?php /* Template Name: Blog */ get_header(); ?>
+     <main class="container-fluid blog">
+      <section class="container padb">
+        <h4 class="red">L'ensemble des articles de blog</h4>
+        <p class="red stb">La promo 2018 de l'acs Vesoul</p>
+        <p class="p">Vous retrouverez ici l'ensemble des billets de blog écrits par le collectif de développeurs "Cancoicode" abordant des sujets divers et variés tels que la technologie, le web d'aujourd'hui, l'éthique ou encore l'écologie dans le domaine du numérique. Vous verrez égalemnt l'ensemble des membres du collectif ainsi que tous les projets sur lesquels nous avons oeuvrés.</p>
+        <p class="p">Bonne visite!</p>
+      </section>
+
+      <section class="container">
+        <nav aria-label="Page navigation example" class="cq">
+        <ul class="pagination justify-content-end">
+          <li class="page-item nbg">
+            <a class="page-link" href="#" aria-label="Previous">
+              <span class="blk" aria-hidden="true">&lt;</span>
+              <span class="sr-only">Previous</span>
+            </a>
+          </li>
+          <li class="page-item nb"><a class="page-link blk" href="#">1</a></li>
+          <li class="page-item nb"><a class="page-link blk" href="#">2</a></li>
+          <li class="page-item nbd">
+            <a class="page-link" href="#" aria-label="Next">
+              <span class="blk" aria-hidden="true">&gt;</span>
+              <span class="sr-only">Next</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+        <div class="row">
+          <div class="col-lg-4">
+            <img src="<?php bloginfo('template_directory'); ?>/assets/img/article.png" alt="image article" width="100%">
+            <h5 class="red">Titre d'article</h5>
+            <p class="red stb">Sous-titre d'article</p>
+            <hr align="left" />
+            <p class="l">Altera sententia est, quae definit amicitiam paribus officiis ac voluntatibus. Hoc quidem est nimis exigue et exiliter ad calculos vocare amicitiam, ut par sit ratio acceptorum et datorum. Divitior mihi et affluentior videtur esse vera amicitia nec observare restricte, ne plus reddat quam acceperit; neque enim verendum est, ne quid excidat, aut ne quid in [...]</p>
+            <p class="text-right red stb">Lire la suite<i class="fa fa-chevron-right" aria-hidden="true"></i></p>
+          </div>
+          <div class="col-lg-4 ">
+            <img src="<?php bloginfo('template_directory'); ?>/assets/img/article.png" alt="image article" width="100%">
+            <h5 class="red">Titre d'article</h5>
+            <p class="red stb">Sous-titre d'article</p>
+            <hr align="left" />
+
+            <p class="l">Altera sententia est, quae definit amicitiam paribus officiis ac voluntatibus. Hoc quidem est nimis exigue et exiliter ad calculos vocare amicitiam, ut par sit ratio acceptorum et datorum. Divitior mihi et affluentior videtur esse vera amicitia nec observare restricte, ne plus reddat quam acceperit; neque enim verendum est, ne quid excidat, aut ne quid in [...]</p>
+            <p class="text-right red stb">Lire la suite<i class="fa fa-chevron-right" aria-hidden="true"></i></p>
+          </div>
+          <div class="col-lg-4">
+            <img src="<?php bloginfo('template_directory'); ?>/assets/img/article.png" alt="image article" width="100%">
+            <h5 class="red">Titre d'article</h5>
+            <p class="red stb">Sous-titre d'article</p>
+             <hr align="left" />
+            <p class="l">Altera sententia est, quae definit amicitiam paribus officiis ac voluntatibus. Hoc quidem est nimis exigue et exiliter ad calculos vocare amicitiam, ut par sit ratio acceptorum et datorum. Divitior mihi et affluentior videtur esse vera amicitia nec observare restricte, ne plus reddat quam acceperit; neque enim verendum est, ne quid excidat, aut ne quid in [...]</p>
+            <p class="text-right red stb">Lire la suite<i class="fa fa-chevron-right" aria-hidden="true"></i></p>
+          </div>
+
+        </div>
+
+
+        <div class="row middle hidden-sm-down">
+          <div class="col-lg-4 ">
+            <img src="<?php bloginfo('template_directory'); ?>/assets/img/article.png" alt="image article" width="100%">
+            <h5 class="red">Titre d'article</h5>
+            <p class="red stb">Sous-titre d'article</p>
+             <hr align="left" />
+            <p class="l">Altera sententia est, quae definit amicitiam paribus officiis ac voluntatibus. Hoc quidem est nimis exigue et exiliter ad calculos vocare amicitiam, ut par sit ratio acceptorum et datorum. Divitior mihi et affluentior videtur esse vera amicitia nec observare restricte, ne plus reddat quam acceperit; neque enim verendum est, ne quid excidat, aut ne quid in [...]</p>
+            <p class="text-right red stb">Lire la suite<i class="fa fa-chevron-right" aria-hidden="true"></i></p>
+          </div>
+          <div class="col-lg-4 ">
+            <img src="<?php bloginfo('template_directory'); ?>/assets/img/article.png" alt="image article" width="100%">
+            <h5 class="red">Titre d'article</h5>
+            <p class="red stb">Sous-titre d'article</p>
+            <hr align="left" />
+            <p class="l">Altera sententia est, quae definit amicitiam paribus officiis ac voluntatibus. Hoc quidem est nimis exigue et exiliter ad calculos vocare amicitiam, ut par sit ratio acceptorum et datorum. Divitior mihi et affluentior videtur esse vera amicitia nec observare restricte, ne plus reddat quam acceperit; neque enim verendum est, ne quid excidat, aut ne quid in [...]</p>
+            <p class="text-right red stb">Lire la suite<i class="fa fa-chevron-right" aria-hidden="true"></i></p>
+          </div>
+          <div class="col-lg-4">
+            <img src="<?php bloginfo('template_directory'); ?>/assets/img/article.png" alt="image article" width="100%">
+            <h5 class="red">Titre d'article</h5>
+            <p class="red stb">Sous-titre d'article</p>
+           <hr align="left" />
+            <p class="l">Altera sententia est, quae definit amicitiam paribus officiis ac voluntatibus. Hoc quidem est nimis exigue et exiliter ad calculos vocare amicitiam, ut par sit ratio acceptorum et datorum. Divitior mihi et affluentior videtur esse vera amicitia nec observare restricte, ne plus reddat quam acceperit; neque enim verendum est, ne quid excidat, aut ne quid in [...]</p>
+            <p class="text-right red stb">Lire la suite<i class="fa fa-chevron-right" aria-hidden="true"></i></p>
+          </div>
+
+        </div>
+
+
+        <div class="row hidden-sm-down">
+          <div class="col-lg-4 ">
+            <img src="<?php bloginfo('template_directory'); ?>/assets/img/article.png" alt="image article" width="100%">
+            <h5 class="red">Titre d'article</h5>
+            <p class="red stb">Sous-titre d'article</p>
+             <hr align="left" />
+            <p class="l">Altera sententia est, quae definit amicitiam paribus officiis ac voluntatibus. Hoc quidem est nimis exigue et exiliter ad calculos vocare amicitiam, ut par sit ratio acceptorum et datorum. Divitior mihi et affluentior videtur esse vera amicitia nec observare restricte, ne plus reddat quam acceperit; neque enim verendum est, ne quid excidat, aut ne quid in [...]</p>
+            <p class="text-right red stb">Lire la suite<i class="fa fa-chevron-right" aria-hidden="true"></i></p>
+          </div>
+          <div class="col-lg-4 ">
+            <img src="<?php bloginfo('template_directory'); ?>/assets/img/article.png" alt="image article" width="100%">
+            <h5 class="red">Titre d'article</h5>
+            <p class="red stb">Sous-titre d'article</p>
+           <hr align="left" />
+            <p class="l">Altera sententia est, quae definit amicitiam paribus officiis ac voluntatibus. Hoc quidem est nimis exigue et exiliter ad calculos vocare amicitiam, ut par sit ratio acceptorum et datorum. Divitior mihi et affluentior videtur esse vera amicitia nec observare restricte, ne plus reddat quam acceperit; neque enim verendum est, ne quid excidat, aut ne quid in [...]</p>
+            <p class="text-right red stb">Lire la suite<i class="fa fa-chevron-right" aria-hidden="true"></i></p>
+          </div>
+          <div class="col-lg-4">
+            <img src="<?php bloginfo('template_directory'); ?>/assets/img/article.png" alt="image article" width="100%">
+            <h5 class="red">Titre d'article</h5>
+            <p class="red stb">Sous-titre d'article</p>
+             <hr align="left" />
+            <p class="l">Altera sententia est, quae definit amicitiam paribus officiis ac voluntatibus. Hoc quidem est nimis exigue et exiliter ad calculos vocare amicitiam, ut par sit ratio acceptorum et datorum. Divitior mihi et affluentior videtur esse vera amicitia nec observare restricte, ne plus reddat quam acceperit; neque enim verendum est, ne quid excidat, aut ne quid in [...]</p>
+            <p class="text-right red stb">Lire la suite<i class="fa fa-chevron-right" aria-hidden="true"></i></p>
+          </div>
+
+        </div>
+
+  <nav aria-label="Page navigation example" class="cq">
+  <ul class="pagination justify-content-end">
+    <li class="page-item nbg">
+      <a class="page-link" href="#" aria-label="Previous">
+        <span class="blk" aria-hidden="true">&lt;</span>
+        <span class="sr-only">Previous</span>
+      </a>
+    </li>
+    <li class="page-item nb"><a class="page-link blk" href="#">1</a></li>
+    <li class="page-item nb"><a class="page-link blk" href="#">2</a></li>
+    <li class="page-item nbd">
+      <a class="page-link" href="#" aria-label="Next">
+        <span class="blk" aria-hidden="true">&gt;</span>
+        <span class="sr-only">Next</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+      </section>
+
+    </main>
+    
+   <?php get_footer(); ?>

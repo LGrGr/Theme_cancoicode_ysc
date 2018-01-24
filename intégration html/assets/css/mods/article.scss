@@ -1,0 +1,53 @@
+.article {
+    padding-top: 85px;
+    padding-bottom: 100px;
+    .container {
+        img {
+                margin: auto;
+            }
+        .titre {
+             h2 {
+                @include fonts(ralewayExtraBold, normal, 68px);
+                color: #b11e2f;
+            }
+            .sous-titre {
+                @include fonts(ralewayMedium, normal, 34px);
+            }
+        }
+        hr {
+            width: 50px;
+            height: 3px;
+            background-color: black;
+        }
+        .infos {
+            .fa {
+                font-size: 26px;
+                color: #b11e2f;
+            }
+            div {
+                padding-right: 60px;
+            }
+            p {
+                @include fonts(Myriad Pro, normal, 20px);
+                color: #6b6b6b;
+            }
+        }
+        .text {
+            @include fonts(lato, normal, 15px);
+            text-align: justify;
+            padding-top: 25px;
+            line-height: 26px;
+            padding-bottom: 100px;
+        }
+        button {
+            color: white;
+            border: 1px solid black;
+            background-color: #b11e2f;
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-bottom: 5px;
+            padding-top: 5px;
+            @include fonts(lato, normal, 24px);
+        }
+    }
+}

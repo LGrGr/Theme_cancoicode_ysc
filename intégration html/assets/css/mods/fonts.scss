@@ -1,0 +1,23 @@
+@font-face {
+	font-family: 'gothamMediumItalic';
+	src: url('../fonts/GothamRoundedMediumItalic.eot');
+	src: url('../fonts/GothamRoundedMediumItalic.woff') format('woff'), url('../fonts/GothamRoundedMediumItalic.ttf') format('truetype'), url('../fonts/GothamRoundedMediumItalic.svg') format('svg');
+}
+@font-face {
+	font-family: 'lato';
+	src: url('../fonts/latoRegular.ttf');
+}
+@font-face {
+	font-family: 'ralewayMedium';
+	src: url('../fonts/ralewayMedium.ttf');
+}
+@font-face {
+	font-family: 'ralewayExtraBold';
+	src: url('../fonts/ralewayExtraBold.ttf');
+}
+@mixin fonts($font, $weight, $size) {
+    font-family: $font;
+    font-weight: $weight;
+    font-size: $size;
+    font-size: calculateRem($size);
+}

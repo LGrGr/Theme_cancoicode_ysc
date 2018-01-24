@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Blog_Cancoicode</title>
+    <meta charset=<?php bloginfo('charset'); ?> >
+    <title><?php bloginfo('name'); ?></title>
     
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/app.css">
+<?php wp_head(); ?>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
