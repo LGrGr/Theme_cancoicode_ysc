@@ -2666,6 +2666,14 @@ footer {
   background-color: #b11e2f;
   padding: 0px; }
 
+.section_bienvenue {
+  padding-top: 85px; }
+
+hr {
+  width: 50px;
+  height: 3px;
+  background-color: black; }
+
 .logo {
   padding: 0px;
   margin-bottom: 30px; }
@@ -2720,6 +2728,9 @@ footer {
 
 h4 {
   padding-top: 46px; }
+
+.section_articles .card {
+  border: none; }
 
 .section_carouselEquipe {
   background-color: #FFF; }
