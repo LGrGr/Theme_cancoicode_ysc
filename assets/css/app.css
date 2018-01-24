@@ -2724,3 +2724,82 @@ h4 {
 
 .section_carouselEquipe {
   background-color: #FFF; }
+
+.projet h4 {
+  font-family: 'ralewayExtraBold';
+  font-size: 36px; }
+
+.projet .st {
+  font-family: 'ralewayMedium';
+  font-size: 24px; }
+
+.projet hr {
+  width: 50px;
+  align-content: flex-start;
+  height: 3px;
+  background-color: black; }
+
+.projet .red {
+  color: #b11e2f; }
+
+.projet .wh {
+  color: #fff; }
+
+.projet .bgred {
+  background-color: #b11e2f; }
+
+.projet .p {
+  font-family: 'latoRegular';
+  font-size: 24px; }
+
+.projet .pad {
+  padding-top: 100px;
+  padding-bottom: 100px; }
+
+.blog h4 {
+  font-family: 'ralewayExtraBold';
+  font-size: 36px; }
+
+.blog h5 {
+  font-size: 27px;
+  font-family: 'ralewayExtraBold';
+  padding-top: 20px; }
+
+.blog .red {
+  color: #b11e2f; }
+
+.blog .art {
+  padding-left: 5px;
+  padding-right: 5px; }
+
+.blog .l {
+  font-family: 'latoRegular';
+  font-size: 18px; }
+
+.blog .stb {
+  font-family: 'ralewayMedium';
+  font-size: 18px; }
+
+.blog .middle {
+  padding-top: 80px;
+  padding-bottom: 80px; }
+
+.blog .nb {
+  margin-left: 5px;
+  margin-right: 5px; }
+
+.blog .nbg {
+  margin-right: 5px; }
+
+.blog .nbd {
+  margin-left: 5px; }
+
+.blog .blk {
+  color: #000; }
+
+.blog .cq {
+  padding-top: 50px;
+  padding-bottom: 50px; }
+
+.blog .padb {
+  padding-top: 100px; }
