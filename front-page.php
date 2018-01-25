@@ -14,7 +14,7 @@
     <div class="container">
         <div class="row text-center justify-content-center">
             <div class="">
-                <img src="<?php bloginfo('template_directory'); ?>/assets/img/logo_cancoicode.svg" alt="logo_cancoicode" class="img-fluid logo">
+                <img src="<?php bloginfo('template_directory'); ?>/assets/img/logo_cancoicode_penche2.svg" alt="logo_cancoicode" class="img-fluid logo">
             </div>
         </div>
     </div>

@@ -4,7 +4,7 @@
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="#"> <img src="<?php bloginfo('template_directory'); ?>/assets/img/logo_cancoicode_penche.svg" width="320px" height="220px" alt="logo_cancoicode"></a>
+        <a class="navbar-brand" href="#"> <img src="<?php bloginfo('template_directory'); ?>/assets/img/logo_cancoicode_penche2.svg" width="320px" height="220px" alt="logo_cancoicode"></a>
       <?php
         wp_nav_menu( array(
           'theme_location'  =>  'menu-1',
