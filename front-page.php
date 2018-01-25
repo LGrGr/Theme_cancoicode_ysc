@@ -78,66 +78,7 @@
                 <div id="carouselExampleControls" class="carousel carouselred slide" data-ride="carousel">
                     <div class="carousel-inner" role="listbox">
                        
-                        <div class="carousel-item active">
-                          
-                          <div class="container">
-                              <div class="row">
-                                  <div class="col-6">
-                                     <h2 class="titre_article_carousel">SPACE INVADERS</h2> 
-                                     <p class="sous-titre_art_car">Sous-titre d'article</p>
-                                     <hr align="left" />
-                                     <p class="paragraph_carr">Altera sententia est, quae definit amicitiam paribus officiis ac voluntatibus. Hoc Quidem est nimis exigue et exiliter ad calculos vocare amicitiam, ut par sit ratio acceptorum et datorum. Divitior mihi et affluentior videtur esse vera amicitia nex observare restricte, ne plus redar quam acceperit;neque enim verendum est, ne quid excudat, aut ne quid in[...]</p>
-                                  </div>
-                             
-                                   <div class="col-6">
-                                      <img src="<?php bloginfo('template_directory'); ?>/assets/img/space.png">
-                                  </div>
-                              </div> 
-                          </div>
-                        </div>
-                                
-                                
-                        <div class="carousel-item">
-                        
-                         <div class="container">
-                              <div class="row">
-                                  <div class="col-6">
-                                     <h2 class="titre_article_carousel">SPACE INVADERS</h2> 
-                                     <p class="sous-titre_art_car">Sous-titre d'article</p>
-                                     <hr align="left" />
-                                     <p class="paragraph_carr">Altera sententia est, quae definit amicitiam paribus officiis ac voluntatibus. Hoc Quidem est nimis exigue et exiliter ad calculos vocare amicitiam, ut par sit ratio acceptorum et datorum. Divitior mihi et affluentior videtur esse vera amicitia nex observare restricte, ne plus redar quam acceperit;neque enim verendum est, ne quid excudat, aut ne quid in[...]</p>
-                                  </div>
-                                  
-                                   <div class="col-6">
-                                      <img src="<?php bloginfo('template_directory'); ?>/assets/img/space.png">
-                                  </div>
-                              </div> 
-                          </div>      
-                                 
-                            
-                  </div>
-                  
-                <div class="carousel-item">
-                        
-                         <div class="container">
-                              <div class="row">
-                                  <div class="col-6">
-                                     <h2 class="titre_article_carousel">SPACE INVADERS</h2> 
-                                     <p class="sous-titre_art_car">Sous-titre d'article</p>
-                                         <hr align="left" />
-                                     <p class="paragraph_carr">Altera sententia est, quae definit amicitiam paribus officiis ac voluntatibus. Hoc Quidem est nimis exigue et exiliter ad calculos vocare amicitiam, ut par sit ratio acceptorum et datorum. Divitior mihi et affluentior videtur esse vera amicitia nex observare restricte, ne plus redar quam acceperit;neque enim verendum est, ne quid excudat, aut ne quid in[...]</p>
-                                  </div>
-                                  
-                                  
-                                   <div class="col-6">
-                                      <img src="<?php bloginfo('template_directory'); ?>/assets/img/space.png">
-                                  </div>
-                                                        
-                            
-                  </div>
-
-                </div>
-            </div>
+                        <?php echo do_shortcode('[postProjetCarousel]'); ?>
         
     
                     <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -239,14 +180,14 @@ endwhile;
             <div class="carousel-item">
               <div class="container">
               <div class="row">
-               <?php echo do_shortcode('[postCancoillote]'); ?>
+               <?php echo do_shortcode('[postCancoillote2]'); ?>
                 </div>
                 </div>
             </div>
             <div class="carousel-item">
              <div class="container">
               <div class="row">
-               <?php echo do_shortcode('[postCancoillote]'); ?>
+               <?php echo do_shortcode('[postCancoillote3]'); ?>
                 </div>
                 </div>
                 </div>
@@ -255,7 +196,7 @@ endwhile;
             <span class="fa fa-chevron-left fa-2x" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
           </a>
-          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <a class="carousel-control-next" href="#carouselTeam" role="button" data-slide="next">
             <span class="fa fa-chevron-right fa-2x" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
           </a>

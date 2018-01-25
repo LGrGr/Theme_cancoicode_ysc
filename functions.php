@@ -7,9 +7,8 @@ function enqueue_bootstrap() {
   wp_enqueue_style('bootstrap-css', get_template_directory_uri() . '/assets/css/bootstrap.min.css' );
   wp_enqueue_style('font-awesome-css', get_template_directory_uri() . '/assets/css/font-awesome.min.css' );
   wp_enqueue_style('style', get_stylesheet_directory_uri() . '/style.css' );
-  wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/assets/js/bootstrap.min.js', 'jquery' );
   wp_enqueue_script('script', get_template_directory_uri() . '/assets/js/jquery.min.js', 'jquery' );
-  wp_enqueue_script('scripts', get_template_directory_uri() . '/assets/js/wow.min.js', 'wow' );
+  wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/assets/js/bootstrap.min.js', 'bootstrap' );
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_bootstrap' );
 
@@ -194,7 +193,7 @@ if ( $query->have_posts() ) {
              if(get_field('image_de_profil')):
                 $url = get_field('image_de_profil');
             else:
-                $url = 'http://localhost/wordpress/wp-content/themes/cancoicode_ysc/assets/img/image_card.png';
+                $url = 'http://localhost/wordpress/wp-content/themes/Theme_cancoicode_ysc/assets/img/image_card.png';
              endif;
                         if(is_home()):
                             $string .= '<div class="card col-lg-4">';
@@ -399,6 +398,126 @@ if ($query->have_posts()){
 }
 
     add_shortcode('postProjet','show_projet');
+
+function show_projet_carousel(){
+
+        $query = new WP_Query(array( 'post_type' => 'projet','posts_per_page' => 6));
+
+        if ($query->have_posts()){
+        $string = '';
+        $d = 0;
+        while($query->have_posts()): $query->the_post();
+        if($d == 0):
+        // Generation carousel
+        $string .= '<div class="carousel-item active">';
+        $d++;
+        else:
+        $string .= '<div class="carousel-item">';
+        endif;
+        $string .= '<div class="container">
+        <div class="row">
+        <div class="col-6">';
+        $string .= '<h2 class="titre_article_carousel">'.get_the_title().'</h2>';
+        if (get_field('sous_titre_projet')):
+        $string .= '<p class="sous-titre_art_car">'.get_field('sous_titre_projet').'</p>';
+        endif;
+        $string .= '<hr align="left" />';
+        $string .= '<p class="paragraph_carr">'.get_the_excerpt().'</p></div>';
+        if (get_field('image_projet')):
+        $url = get_field('image_projet');
+        $string .= '<div class="col-6"><img src="'.$url.'" width="100%"></div>';
+        endif;
+        $string .= '</div></div></div>';
+        endwhile;
+        return $string;
+
+        wp_reset_postdata();
+
+        }
+        }
+        add_shortcode('postProjetCarousel','show_projet_carousel');
+
+function show_team_2()
+{
+    if(is_home()):
+    $query = new WP_Query( array( 'post_type' => 'team', 'posts_per_page' => 3, 'offset' => 3 ) );
+    endif;
+if ( $query->have_posts() ) {
+         while ( $query->have_posts() ): $query->the_post(); 
+             if(get_field('image_de_profil')):
+                $url = get_field('image_de_profil');
+            else:
+                $url = 'http://localhost/wordpress/wp-content/themes/Theme_cancoicode_ysc/assets/img/image_card.png';
+             endif;
+                        if(is_home()):
+                            $string .= '<div class="card col-lg-4">';
+                        else:
+                            $string .= '<div class="card col-lg-3">';
+                        endif;
+                            $string .= '<div style="background-image: url('.$url.')" class="pic"></div>';
+                            $string .= '<div class="card-body">';
+                            $string .= '<h5 class="card-title text-center text-uppercase">'.get_the_title().'</h5>';
+                            if (get_field('citation')){
+                                $string .= '<p class="sous-titre text-center">'.get_field('citation').'</p>';
+                            }
+                            $string .= '<hr /><p class="card-text">'.get_the_excerpt().'</p>';
+                            $string .= '<a href="'.get_the_permalink().'" class="pull-right">Lire la suite ></a>';
+                            if(get_field('github')){
+                                $string .= '<a href="'.get_field('github').'"><i class="pull-left fa fa-github fa-2x" aria-hidden="true"></i></a>';
+                            }
+                            if(get_field('linkedin')){
+                                $string .= '<a href="'.get_field('linkedin').'"><i class="pull-left fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>';
+                            }
+    $string .= '</div></div>';
+         endwhile;
+} else {
+        $string = "Ajouter des membres dans la promo de Cancoicode !!";
+}
+return $string;
+wp_reset_postdata();
+}
+add_shortcode('postCancoillote2', 'show_team_2');
+
+function show_team_3()
+{
+    if(is_home()):
+    $query = new WP_Query( array( 'post_type' => 'team', 'posts_per_page' => 3, 'offset' => 6 ) );
+    endif;
+if ( $query->have_posts() ) {
+         while ( $query->have_posts() ): $query->the_post(); 
+             if(get_field('image_de_profil')):
+                $url = get_field('image_de_profil');
+            else:
+                $url = 'http://localhost/wordpress/wp-content/themes/Theme_cancoicode_ysc/assets/img/image_card.png';
+             endif;
+                        if(is_home()):
+                            $string .= '<div class="card col-lg-4">';
+                        else:
+                            $string .= '<div class="card col-lg-3">';
+                        endif;
+                            $string .= '<div style="background-image: url('.$url.')" class="pic"></div>';
+                            $string .= '<div class="card-body">';
+                            $string .= '<h5 class="card-title text-center text-uppercase">'.get_the_title().'</h5>';
+                            if (get_field('citation')){
+                                $string .= '<p class="sous-titre text-center">'.get_field('citation').'</p>';
+                            }
+                            $string .= '<hr /><p class="card-text">'.get_the_excerpt().'</p>';
+                            $string .= '<a href="'.get_the_permalink().'" class="pull-right">Lire la suite ></a>';
+                            if(get_field('github')){
+                                $string .= '<a href="'.get_field('github').'"><i class="pull-left fa fa-github fa-2x" aria-hidden="true"></i></a>';
+                            }
+                            if(get_field('linkedin')){
+                                $string .= '<a href="'.get_field('linkedin').'"><i class="pull-left fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>';
+                            }
+    $string .= '</div></div>';
+         endwhile;
+} else {
+        $string = "Ajouter des membres dans la promo de Cancoicode !!";
+}
+return $string;
+wp_reset_postdata();
+}
+add_shortcode('postCancoillote3', 'show_team_3');
 
 ?> 
                 
