@@ -2755,8 +2755,14 @@ h4 {
 .projet .wh {
   color: #fff; }
 
+.projet .wh a {
+  color: #fff; }
+
 .projet .bgred {
   background-color: #b11e2f; }
+
+.projet .bgbl a {
+ color: black; }
 
 .projet .p {
   font-family: 'lato';

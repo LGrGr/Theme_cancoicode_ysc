@@ -192,12 +192,9 @@ function show_team()
 if ( $query->have_posts() ) {
          while ( $query->have_posts() ): $query->the_post(); 
              if(get_field('image_de_profil')):
-                $image = get_field('image_de_profil');
-                $url = $image['url'];
-	            $title = $image['title'];
-	            $alt = $image['alt'];
+                $url = get_field('image_de_profil');
             else:
-                $url = 'http://localhost/wordpress/wp-content/themes/cancoicode/assets/img/image_card.png';
+                $url = 'http://localhost/wordpress/wp-content/themes/cancoicode_ysc/assets/img/image_card.png';
              endif;
                         if(is_home()):
                             $string .= '<div class="card col-lg-4">';
@@ -229,6 +226,179 @@ wp_reset_postdata();
 add_shortcode('postCancoillote', 'show_team');
 add_filter('widget_text', 'do_shortcode');
 
+/**
+	 * Post Type: projets.
+	 */
+
+	$labels = array(
+		"name" => __( "projets", "" ),
+		"singular_name" => __( "projet", "" ),
+		"menu_name" => __( "Projets", "" ),
+		"all_items" => __( "Tous les projets", "" ),
+		"add_new" => __( "Ajouter un projet", "" ),
+		"add_new_item" => __( "Ajouter un nouveau projet", "" ),
+		"edit_item" => __( "Editer un projet", "" ),
+		"new_item" => __( "Nouveau projet", "" ),
+		"view_item" => __( "Vue du projet", "" ),
+		"view_items" => __( "Vue des projets", "" ),
+		"search_items" => __( "Rechercher un projet", "" ),
+		"not_found" => __( "Projet non trouvé", "" ),
+		"not_found_in_trash" => __( "Projet non trouvé dans la corbeille", "" ),
+		"parent_item_colon" => __( "Projet parent", "" ),
+		"featured_image" => __( "Image du projet", "" ),
+		"set_featured_image" => __( "Images exposées du projet", "" ),
+		"remove_featured_image" => __( "Editer l'image du projet", "" ),
+		"use_featured_image" => __( "Utiliser l'image du projet", "" ),
+		"archives" => __( "Archives des projets", "" ),
+		"insert_into_item" => __( "Insérer dans le projet", "" ),
+		"uploaded_to_this_item" => __( "Mettre à jour le projet", "" ),
+		"filter_items_list" => __( "Filtrer la liste des projets", "" ),
+		"items_list_navigation" => __( "Liste de navigation des projets", "" ),
+		"items_list" => __( "Liste des projets", "" ),
+		"attributes" => __( "Attributs des projets", "" ),
+		"parent_item_colon" => __( "Projet parent", "" ),
+	);
+
+	$args = array(
+		"label" => __( "projets", "" ),
+		"labels" => $labels,
+		"description" => "Ecrire un projet ",
+		"public" => true,
+		"publicly_queryable" => true,
+		"show_ui" => true,
+		"show_in_rest" => false,
+		"rest_base" => "",
+		"has_archive" => false,
+		"show_in_menu" => true,
+		"exclude_from_search" => false,
+		"capability_type" => "post",
+		"map_meta_cap" => true,
+		"hierarchical" => false,
+		"rewrite" => array( "slug" => "projet", "with_front" => true ),
+		"query_var" => true,
+		"supports" => array( "title", "editor", "thumbnail", "excerpt", "custom-fields", "comments", "post-formats" ),
+		"taxonomies" => array( "category", "post_tag" ),
+	);
+
+	register_post_type( "projet", $args );
+
+    if(function_exists("register_field_group"))
+{
+	register_field_group(array (
+		'id' => 'acf_projets',
+		'title' => 'Projets',
+		'fields' => array (
+			array (
+				'key' => 'field_5a699f9b7dccb',
+				'label' => 'Sous titre du projet',
+				'name' => 'sous_titre_projet',
+				'type' => 'text',
+				'instructions' => 'Le sous-titre du projet',
+				'required' => 1,
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_5a699fe37dccc',
+				'label' => 'Image du projet',
+				'name' => 'image_projet',
+				'type' => 'image',
+				'required' => 1,
+				'save_format' => 'url',
+				'preview_size' => 'medium',
+				'library' => 'all',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'projet',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'no_box',
+			'hide_on_screen' => array (
+				0 => 'permalink',
+				1 => 'comments',
+				2 => 'categories',
+			),
+		),
+		'menu_order' => 0,
+	));
+}
+
+
+function show_projet(){
+    
+    $query = new WP_Query(array( 'post_type' => 'projet','posts_per_page' => 4));
+    
+if ($query->have_posts()){
+    $string = '';
+    $c = 1;
+    while($query->have_posts()): $query->the_post();
+    if($c % 2 == 0):
+    // Generation blanc
+        $string .= '<section class="container-fluid d-none d-lg-block d-xl-block d-md-block">
+			<div class="container">
+				<div class="row align-items-center">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">';
+        if(get_field('image_projet')):
+            $string .= '<img src="'.get_field('image_projet').'" width="100%">';
+        endif;
+        $string .= '</div>';
+        $string .= '<div class="col-12 col-sm-12 col-md-12 col-lg-6 offset-xl-1 col-xl-4 text-right bgbl"> <h4 class="red">'.get_the_title().'</h4>';
+        if(get_field('sous_titre_projet')):
+            $string .= '<p class="red">'.get_field('sous_titre_projet').'</p>';
+        endif;
+    $string .= '<hr align="right" />';
+    $string .= '<p>'.get_the_excerpt().'</p>';
+    $string .= '<a href="'.get_the_permalink().'"><p class="text-left">Lire la suite ></p></a></div>';
+    
+    $string .= '</div>
+				</div>
+			</div>
+		</section>';
+        $c++;
+    else:
+    // Generation rouge
+        $string .= '<section class="bgred container-fluid d-none d-lg-block d-xl-block d-md-block">
+			 <div class="container">
+				<div class="row align-items-center">
+					<div class="wh col-12 col-sm-12 col-md-12 col-lg-6 offset-xl-1 col-xl-4">';
+    
+        $string .= '<h4>'.get_the_title().'</h4>';
+        if(get_field('sous_titre_projet')):
+            $string .= '<p>'.get_field('sous_titre_projet').'</p>';
+        endif;
+    $string .= '<hr align="left" />';
+    $string .= '<p>'.get_the_excerpt().'</p>';
+    $string .= '<a href="'.get_the_permalink().'"><p class="text-right">Lire la suite ></p></a></div>';
+    $string .= '<div class="col-12 col-sm-12 col-md-12 col-lg-6 offset-xl-1 col-xl-6">';
+    if(get_field('image_projet')):
+        $string .= '<img src="'.get_field('image_projet').'" width="100%">';
+    endif;
+    $string .= '</div></div></div></section>';
+    $c++;
+    endif;
+    endwhile;
+    return $string;
+    
+    wp_reset_postdata();
+    
+    }
+}
+
+    add_shortcode('postProjet','show_projet');
 
 ?> 
                 
